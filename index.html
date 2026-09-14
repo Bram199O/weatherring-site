@@ -70,7 +70,10 @@
           <p class="mt-5 text-sm text-subtle">Requires a Wear OS watch with a round display.</p>
         </div>
         <div class="order-1 lg:order-2">
-          <img src="images/wrist-yangon.jpg" alt="WeatherRing on a wrist in Yangon, thunder on a hot afternoon" width="1080" height="1920" class="mx-auto aspect-[3/4] w-full max-w-md rounded-2xl object-cover object-[center_35%] outline outline-1 -outline-offset-1 outline-white/10 lg:max-w-none">
+          <picture>
+            <source type="image/webp" srcset="images/wrist-yangon.webp">
+            <img src="images/wrist-yangon.jpg" alt="WeatherRing on a wrist in Yangon, thunder on a hot afternoon" width="1080" height="1920" class="mx-auto aspect-[3/4] w-full max-w-md rounded-2xl object-cover object-[center_35%] outline outline-1 -outline-offset-1 outline-white/10 lg:max-w-none">
+          </picture>
         </div>
       </div>
     </section>
@@ -83,48 +86,84 @@
         <div class="mt-12 grid gap-10 sm:grid-cols-2 xl:grid-cols-3">
           <article>
             <div class="relative">
-              <img src="images/wrist-yangon.jpg" alt="WeatherRing on a wrist in Yangon, thunder on a hot afternoon" width="1080" height="1920" class="aspect-[3/4] w-full rounded-2xl object-cover object-[center_32%] outline outline-1 -outline-offset-1 outline-white/10">
-              <img src="images/face-yangon.png" alt="WeatherRing in Yangon, lightning on the rim" width="438" height="438" class="face-disc absolute bottom-4 right-4 w-[30%] max-w-28">
+              <picture>
+                <source type="image/webp" srcset="images/wrist-yangon.webp">
+                <img src="images/wrist-yangon.jpg" alt="WeatherRing on a wrist in Yangon, thunder on a hot afternoon" width="1080" height="1920" class="aspect-[3/4] w-full rounded-2xl object-cover object-[center_32%] outline outline-1 -outline-offset-1 outline-white/10" loading="lazy" decoding="async">
+              </picture>
+              <picture class="absolute bottom-4 right-4 w-[30%] max-w-28">
+                <source type="image/webp" srcset="images/face-yangon.webp">
+                <img src="images/face-yangon.png" alt="WeatherRing in Yangon, lightning on the rim" width="438" height="438" class="face-disc w-full" loading="lazy" decoding="async">
+              </picture>
             </div>
             <p class="mt-4 font-medium text-fg">Yangon<span class="text-gold"> · </span>Thunder</p>
             <p class="mt-1 text-sm text-muted">Heat on the rim, bolts when thunder is in the forecast.</p>
           </article>
           <article>
             <div class="relative">
-              <img src="images/wrist-cairo.jpg" alt="WeatherRing on a wrist in Cairo, a hot morning on the ring" width="1080" height="1920" class="aspect-[3/4] w-full rounded-2xl object-cover object-[center_32%] outline outline-1 -outline-offset-1 outline-white/10">
-              <img src="images/face-cairo.png" alt="WeatherRing in Cairo, heat on the rim and leftover cloud" width="438" height="438" class="face-disc absolute bottom-4 right-4 w-[30%] max-w-28">
+              <picture>
+                <source type="image/webp" srcset="images/wrist-cairo.webp">
+                <img src="images/wrist-cairo.jpg" alt="WeatherRing on a wrist in Cairo, a hot morning on the ring" width="1080" height="1920" class="aspect-[3/4] w-full rounded-2xl object-cover object-[center_32%] outline outline-1 -outline-offset-1 outline-white/10" loading="lazy" decoding="async">
+              </picture>
+              <picture class="absolute bottom-4 right-4 w-[30%] max-w-28">
+                <source type="image/webp" srcset="images/face-cairo.webp">
+                <img src="images/face-cairo.png" alt="WeatherRing in Cairo, heat on the rim and leftover cloud" width="438" height="438" class="face-disc w-full" loading="lazy" decoding="async">
+              </picture>
             </div>
             <p class="mt-4 font-medium text-fg">Cairo<span class="text-gold"> · </span>Heat</p>
             <p class="mt-1 text-sm text-muted">A hot morning: cool dawn, then orange and red through the day.</p>
           </article>
           <article>
             <div class="relative">
-              <img src="images/wrist-lincoln.jpg" alt="WeatherRing on a wrist in Lincoln, a wide daily temperature swing in °F" width="1080" height="1920" class="aspect-[3/4] w-full rounded-2xl object-cover object-[center_32%] outline outline-1 -outline-offset-1 outline-white/10">
-              <img src="images/face-lincoln.png" alt="WeatherRing in Lincoln, temperature scale from cool green to hot orange" width="438" height="438" class="face-disc absolute bottom-4 right-4 w-[30%] max-w-28">
+              <picture>
+                <source type="image/webp" srcset="images/wrist-lincoln.webp">
+                <img src="images/wrist-lincoln.jpg" alt="WeatherRing on a wrist in Lincoln, a wide daily temperature swing in °F" width="1080" height="1920" class="aspect-[3/4] w-full rounded-2xl object-cover object-[center_32%] outline outline-1 -outline-offset-1 outline-white/10" loading="lazy" decoding="async">
+              </picture>
+              <picture class="absolute bottom-4 right-4 w-[30%] max-w-28">
+                <source type="image/webp" srcset="images/face-lincoln.webp">
+                <img src="images/face-lincoln.png" alt="WeatherRing in Lincoln, temperature scale from cool green to hot orange" width="438" height="438" class="face-disc w-full" loading="lazy" decoding="async">
+              </picture>
             </div>
             <p class="mt-4 font-medium text-fg">Lincoln<span class="text-gold"> · </span>Daily swing</p>
             <p class="mt-1 text-sm text-muted">A wide °F day — cool night, then a climb toward red.</p>
           </article>
           <article>
             <div class="relative">
-              <img src="images/wrist-ushuaia.jpg" alt="WeatherRing on a wrist in Ushuaia, snow on a cold rim" width="1080" height="1920" class="aspect-[3/4] w-full rounded-2xl object-cover object-[center_32%] outline outline-1 -outline-offset-1 outline-white/10">
-              <img src="images/face-ushuaia.png" alt="WeatherRing in Ushuaia, snow on the rim" width="438" height="438" class="face-disc absolute bottom-4 right-4 w-[30%] max-w-28">
+              <picture>
+                <source type="image/webp" srcset="images/wrist-ushuaia.webp">
+                <img src="images/wrist-ushuaia.jpg" alt="WeatherRing on a wrist in Ushuaia, snow on a cold rim" width="1080" height="1920" class="aspect-[3/4] w-full rounded-2xl object-cover object-[center_32%] outline outline-1 -outline-offset-1 outline-white/10" loading="lazy" decoding="async">
+              </picture>
+              <picture class="absolute bottom-4 right-4 w-[30%] max-w-28">
+                <source type="image/webp" srcset="images/face-ushuaia.webp">
+                <img src="images/face-ushuaia.png" alt="WeatherRing in Ushuaia, snow on the rim" width="438" height="438" class="face-disc w-full" loading="lazy" decoding="async">
+              </picture>
             </div>
             <p class="mt-4 font-medium text-fg">Ushuaia<span class="text-gold"> · </span>Snow</p>
             <p class="mt-1 text-sm text-muted">Cold blue hours with soft white ticks of snow.</p>
           </article>
           <article>
             <div class="relative">
-              <img src="images/wrist-saopaulo.jpg" alt="WeatherRing on a wrist in São Paulo, rain on a green ring" width="1080" height="1920" class="aspect-[3/4] w-full rounded-2xl object-cover object-[center_32%] outline outline-1 -outline-offset-1 outline-white/10">
-              <img src="images/face-saopaulo.png" alt="WeatherRing in São Paulo, rain streaks on the rim" width="438" height="438" class="face-disc absolute bottom-4 right-4 w-[30%] max-w-28">
+              <picture>
+                <source type="image/webp" srcset="images/wrist-saopaulo.webp">
+                <img src="images/wrist-saopaulo.jpg" alt="WeatherRing on a wrist in São Paulo, rain on a green ring" width="1080" height="1920" class="aspect-[3/4] w-full rounded-2xl object-cover object-[center_32%] outline outline-1 -outline-offset-1 outline-white/10" loading="lazy" decoding="async">
+              </picture>
+              <picture class="absolute bottom-4 right-4 w-[30%] max-w-28">
+                <source type="image/webp" srcset="images/face-saopaulo.webp">
+                <img src="images/face-saopaulo.png" alt="WeatherRing in São Paulo, rain streaks on the rim" width="438" height="438" class="face-disc w-full" loading="lazy" decoding="async">
+              </picture>
             </div>
             <p class="mt-4 font-medium text-fg">São Paulo<span class="text-gold"> · </span>Rain</p>
             <p class="mt-1 text-sm text-muted">Streaks on the hour. Longer means more rain.</p>
           </article>
           <article>
             <div class="relative">
-              <img src="images/wrist-eureka.jpg" alt="WeatherRing on a wrist in Eureka, fog and night veil" width="1080" height="1920" class="aspect-[3/4] w-full rounded-2xl object-cover object-[center_32%] outline outline-1 -outline-offset-1 outline-white/10">
-              <img src="images/face-eureka.png" alt="WeatherRing in Eureka, night veil and fog on the rim" width="438" height="438" class="face-disc absolute bottom-4 right-4 w-[30%] max-w-28">
+              <picture>
+                <source type="image/webp" srcset="images/wrist-eureka.webp">
+                <img src="images/wrist-eureka.jpg" alt="WeatherRing on a wrist in Eureka, fog and night veil" width="1080" height="1920" class="aspect-[3/4] w-full rounded-2xl object-cover object-[center_32%] outline outline-1 -outline-offset-1 outline-white/10" loading="lazy" decoding="async">
+              </picture>
+              <picture class="absolute bottom-4 right-4 w-[30%] max-w-28">
+                <source type="image/webp" srcset="images/face-eureka.webp">
+                <img src="images/face-eureka.png" alt="WeatherRing in Eureka, night veil and fog on the rim" width="438" height="438" class="face-disc w-full" loading="lazy" decoding="async">
+              </picture>
             </div>
             <p class="mt-4 font-medium text-fg">Eureka<span class="text-gold"> · </span>Fog</p>
             <p class="mt-1 text-sm text-muted">Night veil, a yellow sky glow, and a milky fog band.</p>
@@ -139,9 +178,9 @@
         <h2 class="mt-4 max-w-2xl font-display text-3xl text-fg sm:text-4xl">Fully customizable, including always-on</h2>
         <p class="mt-4 max-w-2xl text-muted">The phone and the watch use the same painter. Marks, colours, ring, center chrome, strokes, sky, precipitation, display, and always-on — then save, restore, or reset.</p>
         <div class="mt-12 grid gap-6 md:grid-cols-3">
-          <figure><div class="phone-frame"><img src="images/phone-look-home.jpg" alt="WeatherRing Look tab: Marks & colors, Ring, Center, Strokes" width="720" height="1505"></div><figcaption class="mt-3 text-sm text-muted">Look home</figcaption></figure>
-          <figure><div class="phone-frame"><img src="images/phone-look-ring.jpg" alt="WeatherRing Look tab: ring size and thickness sliders" width="720" height="1505"></div><figcaption class="mt-3 text-sm text-muted">Ring size</figcaption></figure>
-          <figure><div class="phone-frame"><img src="images/phone-look-save.jpg" alt="WeatherRing Look tab: Display, Always-on, Save look" width="720" height="1505"></div><figcaption class="mt-3 text-sm text-muted">Save look</figcaption></figure>
+          <figure><div class="phone-frame"><picture><source type="image/webp" srcset="images/phone-look-home.webp"><img src="images/phone-look-home.jpg" alt="WeatherRing Look tab: Marks & colors, Ring, Center, Strokes" width="720" height="1505" loading="lazy" decoding="async"></picture></div><figcaption class="mt-3 text-sm text-muted">Look home</figcaption></figure>
+          <figure><div class="phone-frame"><picture><source type="image/webp" srcset="images/phone-look-ring.webp"><img src="images/phone-look-ring.jpg" alt="WeatherRing Look tab: ring size and thickness sliders" width="720" height="1505" loading="lazy" decoding="async"></picture></div><figcaption class="mt-3 text-sm text-muted">Ring size</figcaption></figure>
+          <figure><div class="phone-frame"><picture><source type="image/webp" srcset="images/phone-look-save.webp"><img src="images/phone-look-save.jpg" alt="WeatherRing Look tab: Display, Always-on, Save look" width="720" height="1505" loading="lazy" decoding="async"></picture></div><figcaption class="mt-3 text-sm text-muted">Save look</figcaption></figure>
         </div>
         <div class="mt-14 grid gap-10 lg:grid-cols-2">
           <div>
@@ -156,7 +195,10 @@
           </div>
           <figure>
             <div class="phone-frame max-h-[36rem] overflow-y-auto">
-              <img src="images/phone-look-full.jpg" alt="WeatherRing Look tab with the full list of controls, including Always-on toggles" width="720" height="8074">
+              <picture>
+                <source type="image/webp" srcset="images/phone-look-full.webp">
+                <img src="images/phone-look-full.jpg" alt="WeatherRing Look tab with the full list of controls, including Always-on toggles" width="720" height="8074" loading="lazy" decoding="async">
+              </picture>
             </div>
             <figcaption class="mt-3 text-sm text-muted">Full Look — every control, including always-on.</figcaption>
           </figure>
@@ -193,11 +235,11 @@
         <p class="mt-4 max-w-2xl text-muted">Search a city. Use my location is one-shot. Hourly follow is a separate switch, off by default. A saved city never uses background GPS.</p>
         <div class="mt-12 grid gap-8 md:grid-cols-2">
           <figure>
-            <div class="phone-frame"><img src="images/phone-location-saved.jpg" alt="WeatherRing Location tab with Frankfurt saved as a city and hourly update off" width="720" height="1505"></div>
+            <div class="phone-frame"><picture><source type="image/webp" srcset="images/phone-location-saved.webp"><img src="images/phone-location-saved.jpg" alt="WeatherRing Location tab with Frankfurt saved as a city and hourly update off" width="720" height="1505" loading="lazy" decoding="async"></picture></div>
             <figcaption class="mt-3 text-sm text-muted">Saved city — hourly update is off.</figcaption>
           </figure>
           <figure>
-            <div class="phone-frame"><img src="images/phone-location-follow.jpg" alt="WeatherRing Location tab following phone GPS with hourly place updates enabled" width="720" height="1505"></div>
+            <div class="phone-frame"><picture><source type="image/webp" srcset="images/phone-location-follow.webp"><img src="images/phone-location-follow.jpg" alt="WeatherRing Location tab following phone GPS with hourly place updates enabled" width="720" height="1505" loading="lazy" decoding="async"></picture></div>
             <figcaption class="mt-3 text-sm text-muted">Follow mode — update place about once an hour.</figcaption>
           </figure>
         </div>
@@ -215,7 +257,7 @@
           <li class="rounded-2xl bg-bg-elevated p-6 shadow-[var(--shadow-border)]"><p class="kicker">Step 3</p><h3 class="mt-3 font-display text-xl text-fg">Open once, set the face</h3><p class="mt-3 text-sm text-muted">Open WeatherRing once on the watch. On Wear OS 6+ the face can be added after the watch app is installed. On Wear OS 5, add WeatherRing from the picker.</p></li>
         </ol>
         <figure class="mx-auto mt-12 max-w-sm">
-          <div class="phone-frame"><img src="images/phone-watch.jpg" alt="WeatherRing companion Watch tab: current temperature, city, last update, and refresh, install, and sync actions" width="720" height="619"></div>
+          <div class="phone-frame"><picture><source type="image/webp" srcset="images/phone-watch.webp"><img src="images/phone-watch.jpg" alt="WeatherRing companion Watch tab: current temperature, city, last update, and refresh, install, and sync actions" width="720" height="619" loading="lazy" decoding="async"></picture></div>
           <figcaption class="mt-3 text-sm text-muted">Refresh weather, install on the watch, sync this look.</figcaption>
         </figure>
       </div>

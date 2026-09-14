@@ -11,12 +11,37 @@ const LAYERS = {
   fog: { caption: "Milky inner band — fog or dense mist. Thicker = heavier.", face: "read-fog.jpg", alt: "Example WeatherRing face with a milky fog band" }
 };
 
+const preferWebp = (() => {
+  try {
+    return document.createElement("canvas").toDataURL("image/webp").indexOf("data:image/webp") === 0;
+  } catch (e) {
+    return false;
+  }
+})();
+
+const layerFace = document.querySelector("[data-layer-face]");
+const imagePrefix = (() => {
+  if (!layerFace) return "images/";
+  const src = layerFace.getAttribute("src") || "";
+  return src.includes("../images/") ? "../images/" : "images/";
+})();
+
 function faceSrc(file) {
-  const img = document.querySelector("[data-layer-face]");
-  if (!img) return "images/" + file;
-  const src = img.getAttribute("src") || "";
-  const prefix = src.includes("../images/") ? "../images/" : "images/";
-  return prefix + file;
+  const name = preferWebp && file.endsWith(".jpg") ? file.replace(/\.jpg$/, ".webp") : file;
+  return imagePrefix + name;
+}
+
+const decodedFaces = new Map();
+
+function preloadLayerFaces() {
+  Object.values(LAYERS).forEach((layer) => {
+    const src = faceSrc(layer.face);
+    const el = new Image();
+    el.decoding = "async";
+    el.src = src;
+    const done = el.decode ? el.decode() : Promise.resolve();
+    decodedFaces.set(src, done.catch(() => {}));
+  });
 }
 
 function applyLayer(id, syncHash) {
@@ -27,12 +52,34 @@ function applyLayer(id, syncHash) {
   });
   const img = document.querySelector("[data-layer-face]");
   const caption = document.querySelector("[data-layer-caption]");
-  if (img) { img.src = faceSrc(layer.face); img.alt = layer.alt; }
   if (caption) caption.textContent = layer.caption;
   if (syncHash) {
     const next = "#" + id;
     if (window.location.hash !== next) history.replaceState(null, "", next);
   }
+  if (!img) return;
+  img.alt = layer.alt;
+  const nextSrc = faceSrc(layer.face);
+  const applySrc = () => {
+    if (img.getAttribute("src") !== nextSrc) img.src = nextSrc;
+  };
+  const ready = decodedFaces.get(nextSrc);
+  if (ready) {
+    ready.then(applySrc);
+    return;
+  }
+  const probe = new Image();
+  probe.src = nextSrc;
+  const decode = probe.decode ? probe.decode() : Promise.resolve();
+  decodedFaces.set(nextSrc, decode.catch(() => {}));
+  decode.then(applySrc).catch(applySrc);
+}
+
+preloadLayerFaces();
+
+if (layerFace && preferWebp) {
+  const src = layerFace.getAttribute("src") || "";
+  if (src.endsWith(".jpg")) layerFace.src = src.replace(/\.jpg$/, ".webp");
 }
 
 const syncHash = window.location.pathname.indexOf("how-to-read") !== -1;
