@@ -1,0 +1,67 @@
+# WeatherRing
+
+> 24-hour climate ring for round Wear OS watches, with an Android companion.
+
+- Canonical: https://climatedayring.app
+- How to read: https://climatedayring.app/how-to-read
+- Privacy: https://climatedayring.app/privacy
+- Contact: weatherring@protoart.net
+
+## What it is
+
+WeatherRing is a watch face for round Wear OS displays. The rim is today’s forecast from midnight to midnight. Colour is temperature. The hand is now.
+
+Layers on the ring: night veil, sky glow, rain, snow, thunder, fog. Rain, snow and lightning sit on top of the sky glow — they never replace it.
+
+The Android phone companion uses the same painter as the watch. Customize the face and always-on from the Look tab. GPS is optional.
+
+One purchase covers the phone companion and the Wear OS watch app. You still install twice.
+
+- Wear OS 6+: the face can be added after the watch app is installed.
+- Wear OS 5: watch app + complication; add the face from the picker.
+
+Always-on is live. Unlocked AOD only. The interactive face ignores the Always-on group. AOD toggles: temperature ring, sky glow, precipitation, time, date, temps, city.
+
+No account. No ads. No sale of data.
+
+## How to read
+
+Example — not your city.
+
+- All: Midnight → midnight. Colour is temperature. The hand is now.
+- Now: From midnight to the hand is time already passed today. The inner and outer lines are the same mark.
+- Temperature: Cool hours sit toward blue/violet. Warm hours sit toward orange/red.
+- Night: Darker arc is night. It lifts at sunrise and returns at sunset.
+- Sky: Inner glow: yellow = clearer, white/grey = cloud or overcast.
+- Rain: Streaks on that hour. Longer = more rain. Gaps = patchy.
+- Snow: Soft white ticks — snow or ice, not rain.
+- Thunder: Bolts when thunder is in the forecast, even if rain is light.
+- Fog: Milky inner band — fog or dense mist. Thicker = heavier.
+
+Low / now / high are the three numbers. 00 06 12 18 are clock hours.
+
+## Location
+
+GPS is optional. Search a city. Use my location is a one-shot fix and does not turn on hourly follow. Hourly follow is a separate switch, off by default, and needs Allow all the time. A saved city never uses background GPS.
+
+## How to install
+
+1. Install on the phone.
+2. Install the same app on the watch.
+3. Open once on the watch, set WeatherRing as the face.
+
+Requires a Wear OS watch with a round display.
+
+## What it is not
+
+- Not for Apple Watch.
+- Not for rectangular Wear OS.
+- Not a smart ring.
+- Not a web clone of the watch face.
+- GPS is not required.
+- Not an account-based product. No ads. Data is not sold.
+
+## Privacy
+
+See https://climatedayring.app/privacy
+Last updated: 12 September 2026
