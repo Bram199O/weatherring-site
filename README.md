@@ -4,7 +4,7 @@ Public marketing site for **WeatherRing** — a 24-hour climate ring for round W
 
 - Canonical: https://weatherring.net
 - Privacy: https://weatherring.net/privacy
-- Contact: weatherring@protoart.net
+- Contact: support@weatherring.net
 
 This repository is the website only (static HTML/CSS/JS). It is **not** the Android / Wear OS app.
 
