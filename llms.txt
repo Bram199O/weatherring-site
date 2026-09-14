@@ -5,7 +5,7 @@
 - Canonical: https://weatherring.net
 - How to read: https://weatherring.net/how-to-read
 - Privacy: https://weatherring.net/privacy
-- Contact: weatherring@protoart.net
+- Contact: support@weatherring.net
 
 ## What it is
 
