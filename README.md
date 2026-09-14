@@ -6,7 +6,7 @@ Public marketing site for **WeatherRing** — a 24-hour climate ring for round W
 - Privacy: https://climatedayring.app/privacy
 - Contact: weatherring@protoart.net
 
-This repository is the website only (static HTML/CSS/JS). It is **not** the Android / Wear OS app, and it is not a fork of ClimateDayRing.
+This repository is the website only (static HTML/CSS/JS). It is **not** the Android / Wear OS app.
 
 ## Pages
 
@@ -15,11 +15,10 @@ This repository is the website only (static HTML/CSS/JS). It is **not** the Andr
 - `/privacy/` — privacy policy (12 September 2026)
 - `/llms.txt` — machine-readable facts
 
+## Google Play
+
+The Get WeatherRing CTA is a Play Store placeholder until the listing is live. Set `PLAY_STORE_URL` in the exporter (or replace the `#get` badge href) when you have the URL. No email waitlist.
+
 ## Deploy
 
-GitHub Pages from branch `main`, folder `/` (root). `CNAME` is already `climatedayring.app`.
-
-1. Repo **Settings → Pages**
-2. Source: **Deploy from a branch**
-3. Branch: `main` / `/` (root)
-4. Save. Point the domain’s DNS at GitHub Pages if it is not already.
+GitHub Pages from `main` (root). `CNAME` is `climatedayring.app`.

@@ -1,39 +1,48 @@
 
 const LAYERS = {
-  all: { label: "All", city: "Lincoln", caption: "Midnight → midnight. Colour is temperature. The hand is now.", face: "lincoln", alt: "WeatherRing in Lincoln, the full 24-hour ring" },
-  now: { label: "Now", city: "Cairo", caption: "From midnight to the hand is time already passed today. The inner and outer lines are the same mark.", face: "cairo", alt: "WeatherRing in Cairo, the hand marking now" },
-  temperature: { label: "Temperature", city: "Lincoln", caption: "Cool hours sit toward blue/violet. Warm hours sit toward orange/red.", face: "lincoln", alt: "WeatherRing in Lincoln, temperature scale around the rim" },
-  night: { label: "Night", city: "Eureka", caption: "Darker arc is night. It lifts at sunrise and returns at sunset.", face: "eureka", alt: "WeatherRing in Eureka, night veil on the rim" },
-  sky: { label: "Sky", city: "Eureka", caption: "Inner glow: yellow = clearer, white/grey = cloud or overcast.", face: "eureka", alt: "WeatherRing in Eureka, sky glow inside the ring" },
-  rain: { label: "Rain", city: "São Paulo", caption: "Streaks on that hour. Longer = more rain. Gaps = patchy.", face: "saopaulo", alt: "WeatherRing in São Paulo, rain streaks on the rim" },
-  snow: { label: "Snow", city: "Ushuaia", caption: "Soft white ticks — snow or ice, not rain.", face: "ushuaia", alt: "WeatherRing in Ushuaia, snow on the rim" },
-  thunder: { label: "Thunder", city: "Yangon", caption: "Bolts when thunder is in the forecast, even if rain is light.", face: "yangon", alt: "WeatherRing in Yangon, lightning bolts on the rim" },
-  fog: { label: "Fog", city: "Eureka", caption: "Milky inner band — fog or dense mist. Thicker = heavier.", face: "eureka", alt: "WeatherRing in Eureka, fog on the rim" }
+  all: { caption: "Midnight → midnight. Colour is temperature. The hand is now.", face: "read-all.jpg", alt: "Example WeatherRing face with every layer on, 11:00 on Friday 20 March" },
+  now: { caption: "From midnight to the hand is time already passed today. The inner and outer lines are the same mark.", face: "read-now.jpg", alt: "Example WeatherRing face highlighting the now hand and elapsed hours" },
+  temperature: { caption: "Cool hours sit toward blue/violet. Warm hours sit toward orange/red.", face: "read-temperature.jpg", alt: "Example WeatherRing face showing temperature colour around the rim" },
+  night: { caption: "Darker arc is night. It lifts at sunrise (~07) and returns at sunset (~19).", face: "read-night.jpg", alt: "Example WeatherRing face with the night veil on the rim" },
+  sky: { caption: "Inner glow: yellow = clearer, white/grey = cloud or overcast.", face: "read-sky.jpg", alt: "Example WeatherRing face with sky glow inside the ring" },
+  rain: { caption: "Streaks on that hour. Longer = more rain. Gaps = patchy.", face: "read-rain.jpg", alt: "Example WeatherRing face with rain streaks on the rim" },
+  snow: { caption: "Soft white ticks — snow or ice, not rain.", face: "read-snow.jpg", alt: "Example WeatherRing face with snow ticks on the rim" },
+  thunder: { caption: "Bolts when thunder is in the forecast, even if rain is light.", face: "read-thunder.jpg", alt: "Example WeatherRing face with lightning bolts on the rim" },
+  fog: { caption: "Milky inner band — fog or dense mist. Thicker = heavier.", face: "read-fog.jpg", alt: "Example WeatherRing face with a milky fog band" }
 };
 
-function faceSrc(name) {
+function faceSrc(file) {
   const img = document.querySelector("[data-layer-face]");
-  if (!img) return "images/face-" + name + ".png";
+  if (!img) return "images/" + file;
   const src = img.getAttribute("src") || "";
   const prefix = src.includes("../images/") ? "../images/" : "images/";
-  return prefix + "face-" + name + ".png";
+  return prefix + file;
 }
 
-document.querySelectorAll("[data-layer]").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const layer = LAYERS[btn.getAttribute("data-layer")];
-    if (!layer) return;
-    document.querySelectorAll("[data-layer]").forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
-    const img = document.querySelector("[data-layer-face]");
-    const city = document.querySelector("[data-layer-city]");
-    const label = document.querySelector("[data-layer-label]");
-    const caption = document.querySelector("[data-layer-caption]");
-    if (img) { img.src = faceSrc(layer.face); img.alt = layer.alt; }
-    if (city) city.textContent = layer.city;
-    if (label) label.textContent = layer.label;
-    if (caption) caption.textContent = layer.caption;
+function applyLayer(id, syncHash) {
+  const layer = LAYERS[id];
+  if (!layer) return;
+  document.querySelectorAll("[data-layer]").forEach((b) => {
+    b.setAttribute("aria-pressed", String(b.getAttribute("data-layer") === id));
   });
+  const img = document.querySelector("[data-layer-face]");
+  const caption = document.querySelector("[data-layer-caption]");
+  if (img) { img.src = faceSrc(layer.face); img.alt = layer.alt; }
+  if (caption) caption.textContent = layer.caption;
+  if (syncHash) {
+    const next = "#" + id;
+    if (window.location.hash !== next) history.replaceState(null, "", next);
+  }
+}
+
+const syncHash = window.location.pathname.indexOf("how-to-read") !== -1;
+document.querySelectorAll("[data-layer]").forEach((btn) => {
+  btn.addEventListener("click", () => applyLayer(btn.getAttribute("data-layer"), syncHash));
 });
+if (syncHash) {
+  const fromHash = window.location.hash.replace(/^#/, "");
+  if (LAYERS[fromHash]) applyLayer(fromHash, false);
+}
 
 const toggle = document.querySelector("[data-nav-toggle]");
 const mobile = document.getElementById("mobile-nav");
@@ -44,15 +53,3 @@ if (toggle && mobile) {
     toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
   });
 }
-
-document.querySelectorAll("[data-waitlist]").forEach((form) => {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const input = form.querySelector("input[type=email]");
-    const email = (input && input.value || "").trim();
-    if (!email || !email.includes("@")) return;
-    const subject = encodeURIComponent("WeatherRing waitlist");
-    const body = encodeURIComponent("Please add this address to the WeatherRing waitlist:\n\n" + email + "\n");
-    window.location.href = "mailto:weatherring@protoart.net?subject=" + subject + "&body=" + body;
-  });
-});

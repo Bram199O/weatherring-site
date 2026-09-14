@@ -31,7 +31,7 @@ Example — not your city.
 - All: Midnight → midnight. Colour is temperature. The hand is now.
 - Now: From midnight to the hand is time already passed today. The inner and outer lines are the same mark.
 - Temperature: Cool hours sit toward blue/violet. Warm hours sit toward orange/red.
-- Night: Darker arc is night. It lifts at sunrise and returns at sunset.
+- Night: Darker arc is night. It lifts at sunrise (~07) and returns at sunset (~19).
 - Sky: Inner glow: yellow = clearer, white/grey = cloud or overcast.
 - Rain: Streaks on that hour. Longer = more rain. Gaps = patchy.
 - Snow: Soft white ticks — snow or ice, not rain.
