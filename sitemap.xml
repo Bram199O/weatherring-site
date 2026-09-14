@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://climatedayring.app/</loc>
+    <loc>https://weatherring.net/</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://climatedayring.app/how-to-read</loc>
+    <loc>https://weatherring.net/how-to-read</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://climatedayring.app/privacy</loc>
+    <loc>https://weatherring.net/privacy</loc>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://climatedayring.app/llms.txt</loc>
+    <loc>https://weatherring.net/llms.txt</loc>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>

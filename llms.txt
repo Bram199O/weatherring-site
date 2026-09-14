@@ -2,9 +2,9 @@
 
 > 24-hour climate ring for round Wear OS watches, with an Android companion.
 
-- Canonical: https://climatedayring.app
-- How to read: https://climatedayring.app/how-to-read
-- Privacy: https://climatedayring.app/privacy
+- Canonical: https://weatherring.net
+- How to read: https://weatherring.net/how-to-read
+- Privacy: https://weatherring.net/privacy
 - Contact: weatherring@protoart.net
 
 ## What it is
@@ -63,5 +63,5 @@ Requires a Wear OS watch with a round display.
 
 ## Privacy
 
-See https://climatedayring.app/privacy
+See https://weatherring.net/privacy
 Last updated: 12 September 2026
