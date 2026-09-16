@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy — WeatherRing</title>
-  <meta name="description" content="WeatherRing privacy policy. No accounts, no ads, no sale of data. Location is optional. Last updated 12 September 2026.">
+  <meta name="description" content="WeatherRing privacy policy. No accounts, no ads, no sale of data. Location is optional. Last updated 16 September 2026.">
   <meta name="theme-color" content="#070708">
-  <link rel="canonical" href="https://weatherring.net/privacy">
+  <link rel="canonical" href="https://weatherring.net/privacy/">
   <link rel="alternate" type="text/plain" href="https://weatherring.net/llms.txt" title="llms.txt">
   <meta property="og:title" content="Privacy — WeatherRing">
-  <meta property="og:description" content="WeatherRing privacy policy. No accounts, no ads, no sale of data. Location is optional. Last updated 12 September 2026.">
-  <meta property="og:url" content="https://weatherring.net/privacy">
+  <meta property="og:description" content="WeatherRing privacy policy. No accounts, no ads, no sale of data. Location is optional. Last updated 16 September 2026.">
+  <meta property="og:url" content="https://weatherring.net/privacy/">
   <meta property="og:image" content="https://weatherring.net/og.jpg">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="WeatherRing">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Privacy — WeatherRing">
-  <meta name="twitter:description" content="WeatherRing privacy policy. No accounts, no ads, no sale of data. Location is optional. Last updated 12 September 2026.">
+  <meta name="twitter:description" content="WeatherRing privacy policy. No accounts, no ads, no sale of data. Location is optional. Last updated 16 September 2026.">
   <meta name="twitter:image" content="https://weatherring.net/og.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,7 +59,7 @@
       <div class="mx-auto max-w-3xl px-5 py-16 sm:px-8 sm:py-20">
         <p class="kicker">Policy</p>
         <h1 class="mt-4 font-display text-4xl text-fg sm:text-5xl">Privacy</h1>
-        <p class="mt-4 text-muted">Last updated: 12 September 2026</p>
+        <p class="mt-4 text-muted">Last updated: 16 September 2026</p>
       </div>
     </header>
     <article class="mx-auto max-w-3xl px-5 py-12 sm:px-8">
@@ -74,7 +74,7 @@
       <h2 class="mt-12 font-display text-2xl text-fg">Where data goes</h2>
       <p class="mt-4 text-muted">WeatherRing sends the place you chose over HTTPS:</p>
       <ul class="mt-4 list-disc space-y-3 pl-5 text-muted">
-        <li><strong class="font-medium text-fg">Forecast</strong> — coordinates to weather.weatherring.net (self-hosted Open-Meteo).</li>
+        <li><strong class="font-medium text-fg">Forecast</strong> — coordinates to weather.weatherring.net (self-hosted Open-Meteo). If that is slow or down, the same coordinates go to WeatherAPI.com (api.weatherapi.com) as the forecast backup.</li>
         <li><strong class="font-medium text-fg">City search</strong> — the typed city name to WeatherAPI.com (api.weatherapi.com).</li>
         <li><strong class="font-medium text-fg">Live GPS place name</strong> — a current device GPS fix on the phone only to BigDataCloud (api.bigdatacloud.net). Not used for a saved city. The watch does not call BigDataCloud.</li>
       </ul>
@@ -84,12 +84,12 @@
       <ul class="mt-4 list-disc space-y-3 pl-5 text-muted">
         <li><strong class="font-medium text-fg">Approximate / precise location</strong> — optional.
           <ul class="mt-3 list-disc space-y-2 pl-5">
-            <li>Use my location (app on screen) may use precise location for a one-shot fix. It does not turn on hourly follow and does not ask for “Allow all the time.”</li>
-            <li>Update place about once an hour is off until you turn it on under Location. Then WeatherRing reads approximate location about once an hour so the weather on the watch can stay current when you travel. That needs “Allow all the time.” Turn the switch off anytime; the last coordinates stay and weather still refreshes for that place.</li>
+            <li><strong class="font-medium text-fg">Use my location</strong> (app on screen) may use precise location for a one-shot fix. It does not turn on hourly follow and does not ask for “Allow all the time.”</li>
+            <li><strong class="font-medium text-fg">Follow your location hourly</strong> is off until you turn it on under Location. Then WeatherRing reads <strong class="font-medium text-fg">approximate</strong> location about once an hour so the weather on the watch can stay current when you travel. That needs “Allow all the time.” Turn the switch off anytime; the last coordinates stay and weather still refreshes for that place.</li>
             <li>A chosen city never uses hourly background location. You can search a city instead and never grant location.</li>
           </ul>
         </li>
-        <li><strong class="font-medium text-fg">Internet</strong> — HTTPS to weather.weatherring.net (forecast), WeatherAPI.com (city search), and BigDataCloud (live GPS place name on the phone).</li>
+        <li><strong class="font-medium text-fg">Internet</strong> — HTTPS to weather.weatherring.net (forecast), WeatherAPI.com (city search and forecast backup), and BigDataCloud (live GPS place name on the phone).</li>
         <li><strong class="font-medium text-fg">Nearby devices / Bluetooth</strong> — Wear OS Data Layer with the paired watch.</li>
       </ul>
       <h2 class="mt-12 font-display text-2xl text-fg">Children</h2>

@@ -4,7 +4,7 @@
 
 - Canonical: https://weatherring.net
 - How to read: https://weatherring.net/how-to-read
-- Privacy: https://weatherring.net/privacy
+- Privacy: https://weatherring.net/privacy/
 - Contact: support@weatherring.net
 
 ## What it is
@@ -63,5 +63,6 @@ Requires a Wear OS watch with a round display.
 
 ## Privacy
 
-See https://weatherring.net/privacy
-Last updated: 12 September 2026
+See https://weatherring.net/privacy/
+Forecast coordinates go to weather.weatherring.net (self-hosted Open-Meteo); if that is slow or down, the same coordinates go to WeatherAPI.com as forecast backup. City search uses WeatherAPI.com. Live GPS place name on the phone only uses BigDataCloud. No accounts, no ads, no sale of data.
+Last updated: 16 September 2026
