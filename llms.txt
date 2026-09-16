@@ -9,13 +9,13 @@
 
 ## What it is
 
-WeatherRing is a watch face for round Wear OS displays. The rim is today’s forecast from midnight to midnight. Colour is temperature. The hand is now.
+WeatherRing is a watch face for round Wear OS displays. The rim is today’s forecast from midnight to midnight. Color shows temperature, and the hand points to the current hour.
 
 Layers on the ring: night veil, sky glow, rain, snow, thunder, fog. Rain, snow and lightning sit on top of the sky glow — they never replace it.
 
-The Android phone companion uses the same painter as the watch. Customize the face and always-on from the Look tab. GPS is optional.
+The Android phone companion uses the exact same preview rendering as the watch. Customize the face and Always-On Display from the Look tab. Location is optional.
 
-One purchase covers the phone companion and the Wear OS watch app. You still install twice.
+One purchase covers both the phone companion and the Wear OS app. You still install twice.
 
 - Wear OS 6+: the face can be added after the watch app is installed.
 - Wear OS 5: watch app + complication; add the face from the picker.
@@ -28,21 +28,21 @@ No account. No ads. No sale of data.
 
 Example — not your city.
 
-- All: Midnight → midnight. Colour is temperature. The hand is now.
-- Now: From midnight to the hand is time already passed today. The inner and outer lines are the same mark.
-- Temperature: Cool hours sit toward blue/violet. Warm hours sit toward orange/red.
-- Night: Darker arc is night. It lifts at sunrise (~07) and returns at sunset (~19).
-- Sky: Inner glow: yellow = clearer, white/grey = cloud or overcast.
-- Rain: Streaks on that hour. Longer = more rain. Gaps = patchy.
-- Snow: Soft white ticks — snow or ice, not rain.
-- Thunder: Bolts when thunder is in the forecast, even if rain is light.
-- Fog: Milky inner band — fog or dense mist. Thicker = heavier.
+- All: Midnight to midnight. Color shows temperature, and the hand points to the current hour.
+- Now: From midnight to the hand is time that has already passed today. The inner and outer lines point to the same mark.
+- Temperature: Cooler hours lean blue and violet, while warmer hours shift toward orange and red.
+- Night: The darker arc marks night. It disappears at sunrise and returns at sunset.
+- Sky: Inner glow shows sky clarity—yellow means clear skies, while white or gray indicates clouds.
+- Rain: Streaks appear on the hour—longer streaks mean heavier rain, while gaps mean patchy showers.
+- Snow: Soft white ticks represent snow or ice instead of rain.
+- Thunder: Lightning bolts appear whenever thunder is forecast, even if rain is light.
+- Fog: A milky inner band indicates fog or dense mist—a thicker band means heavier fog.
 
 Low / now / high are the three numbers. 00 06 12 18 are clock hours.
 
 ## Location
 
-GPS is optional. Search a city. Use my location is a one-shot fix and does not turn on hourly follow. Hourly follow is a separate switch, off by default, and needs Allow all the time. A saved city never uses background GPS.
+Location is optional. Search any city manually, or tap "Use my location" for a quick one-time check. Hourly location updates are controlled by a separate switch (off by default) and need Allow all the time. Saved cities never run background GPS.
 
 ## How to install
 
@@ -58,7 +58,7 @@ Requires a Wear OS watch with a round display.
 - Not for rectangular Wear OS.
 - Not a smart ring.
 - Not a web clone of the watch face.
-- GPS is not required.
+- Location is not required.
 - Not an account-based product. No ads. Data is not sold.
 
 ## Privacy
