@@ -1,14 +1,14 @@
 
 const LAYERS = {
-  all: { caption: "Midnight → midnight. Colour is temperature. The hand is now.", face: "read-all.jpg", alt: "Example WeatherRing face with every layer on, 11:00 on Friday 20 March" },
-  now: { caption: "From midnight to the hand is time already passed today. The inner and outer lines are the same mark.", face: "read-now.jpg", alt: "Example WeatherRing face highlighting the now hand and elapsed hours" },
-  temperature: { caption: "Cool hours sit toward blue/violet. Warm hours sit toward orange/red.", face: "read-temperature.jpg", alt: "Example WeatherRing face showing temperature colour around the rim" },
-  night: { caption: "Darker arc is night. It lifts at sunrise (~07) and returns at sunset (~19).", face: "read-night.jpg", alt: "Example WeatherRing face with the night veil on the rim" },
-  sky: { caption: "Inner glow: yellow = clearer, white/grey = cloud or overcast.", face: "read-sky.jpg", alt: "Example WeatherRing face with sky glow inside the ring" },
-  rain: { caption: "Streaks on that hour. Longer = more rain. Gaps = patchy.", face: "read-rain.jpg", alt: "Example WeatherRing face with rain streaks on the rim" },
-  snow: { caption: "Soft white ticks — snow or ice, not rain.", face: "read-snow.jpg", alt: "Example WeatherRing face with snow ticks on the rim" },
-  thunder: { caption: "Bolts when thunder is in the forecast, even if rain is light.", face: "read-thunder.jpg", alt: "Example WeatherRing face with lightning bolts on the rim" },
-  fog: { caption: "Milky inner band — fog or dense mist. Thicker = heavier.", face: "read-fog.jpg", alt: "Example WeatherRing face with a milky fog band" }
+  all: { caption: "Midnight to midnight. Color shows temperature, and the hand points to the current hour.", face: "read-all.jpg", alt: "Example WeatherRing face with every layer on, 11:00 on Friday 20 March" },
+  now: { caption: "From midnight to the hand is time that has already passed today. The inner and outer lines point to the same mark.", face: "read-now.jpg", alt: "Example WeatherRing face highlighting the now hand and elapsed hours" },
+  temperature: { caption: "Cooler hours lean blue and violet, while warmer hours shift toward orange and red.", face: "read-temperature.jpg", alt: "Example WeatherRing face showing temperature colour around the rim" },
+  night: { caption: "The darker arc marks night. It disappears at sunrise and returns at sunset.", face: "read-night.jpg", alt: "Example WeatherRing face with the night veil on the rim" },
+  sky: { caption: "Inner glow shows sky clarity—yellow means clear skies, while white or gray indicates clouds.", face: "read-sky.jpg", alt: "Example WeatherRing face with sky glow inside the ring" },
+  rain: { caption: "Streaks appear on the hour—longer streaks mean heavier rain, while gaps mean patchy showers.", face: "read-rain.jpg", alt: "Example WeatherRing face with rain streaks on the rim" },
+  snow: { caption: "Soft white ticks represent snow or ice instead of rain.", face: "read-snow.jpg", alt: "Example WeatherRing face with snow ticks on the rim" },
+  thunder: { caption: "Lightning bolts appear whenever thunder is forecast, even if rain is light.", face: "read-thunder.jpg", alt: "Example WeatherRing face with lightning bolts on the rim" },
+  fog: { caption: "A milky inner band indicates fog or dense mist—a thicker band means heavier fog.", face: "read-fog.jpg", alt: "Example WeatherRing face with a milky fog band" }
 };
 
 const preferWebp = (() => {
