@@ -19,7 +19,7 @@ This repository is the website only (static HTML/CSS/JS). It is **not** the Andr
 
 Live listing: https://play.google.com/store/apps/details?id=com.climatedayring.phone
 
-The Get WeatherRing buttons jump to the `#get` section on the homepage, where the Google Play badge links to the listing. The footer "Google Play" link and the JSON-LD (`downloadUrl`, `installUrl`, `offers.url`) point straight to it.
+All Get WeatherRing buttons, the Google Play badge in the homepage `#get` section, the footer "Google Play" link and the JSON-LD (`downloadUrl`, `installUrl`, `offers.url`) point straight to it.
 
 ## Deploy
 
