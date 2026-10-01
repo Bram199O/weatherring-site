@@ -17,7 +17,9 @@ This repository is the website only (static HTML/CSS/JS). It is **not** the Andr
 
 ## Google Play
 
-The Get WeatherRing CTA is a Play Store placeholder until the listing is live. Set `PLAY_STORE_URL` in the exporter (or replace the `#get` badge href) when you have the URL. No email waitlist.
+Live listing: https://play.google.com/store/apps/details?id=com.climatedayring.phone
+
+The Get WeatherRing buttons jump to the `#get` section on the homepage, where the Google Play badge links to the listing. The footer "Google Play" link and the JSON-LD (`downloadUrl`, `installUrl`, `offers.url`) point straight to it.
 
 ## Deploy
 
