@@ -5,6 +5,7 @@
 - Canonical: https://weatherring.net
 - How to read: https://weatherring.net/how-to-read
 - Privacy: https://weatherring.net/privacy/
+- Google Play: https://play.google.com/store/apps/details?id=com.climatedayring.phone
 - Contact: support@weatherring.net
 
 ## What it is
@@ -46,7 +47,7 @@ Location is optional. Search any city manually, or tap "Use my location" for a q
 
 ## How to install
 
-1. Install on the phone.
+1. Install on the phone from Google Play: https://play.google.com/store/apps/details?id=com.climatedayring.phone
 2. Install the same app on the watch.
 3. Open once on the watch, set WeatherRing as the face.
 
