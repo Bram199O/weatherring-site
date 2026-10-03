@@ -1,6 +1,6 @@
 # WeatherRing
 
-> 24-hour climate ring for round Wear OS watches, with an Android companion.
+> 24-hour climate ring for round Wear OS 6+ watches, with an Android companion.
 
 - Canonical: https://weatherring.net
 - How to read: https://weatherring.net/how-to-read
@@ -10,7 +10,7 @@
 
 ## What it is
 
-WeatherRing is a watch face for round Wear OS displays. The rim is today’s forecast from midnight to midnight. Color shows temperature, and the hand points to the current hour.
+WeatherRing is a watch face for round Wear OS 6+ displays. The rim is today’s forecast from midnight to midnight. Color shows temperature, and the hand points to the current hour.
 
 Layers on the ring: night veil, sky glow, rain, snow, thunder, fog. Rain, snow and lightning sit on top of the sky glow — they never replace it.
 
@@ -18,8 +18,8 @@ The Android phone companion uses the exact same preview rendering as the watch. 
 
 One purchase covers both the phone companion and the Wear OS app. You still install twice.
 
-- Wear OS 6+: the face can be added after the watch app is installed.
-- Wear OS 5: watch app + complication; add the face from the picker.
+- Wear OS 6 or newer: the face can be added after the watch app is installed.
+- Wear OS 5 and older: the face does not show up in the watch face picker. Support for Wear OS 5 watches is being worked on.
 
 Always-on is live. Unlocked AOD only. The interactive face ignores the Always-on group. AOD toggles: temperature ring, sky glow, precipitation, time, date, temps, city.
 
@@ -51,12 +51,13 @@ Location is optional. Search any city manually, or tap "Use my location" for a q
 2. Install the same app on the watch.
 3. Open once on the watch, set WeatherRing as the face.
 
-Requires a Wear OS watch with a round display.
+The WeatherRing watch face requires Wear OS 6 or newer and a round display (for example Pixel Watch 3/4, Galaxy Watch 8, or watches updated to Wear OS 6). Support for Wear OS 5 watches is being worked on.
 
 ## What it is not
 
 - Not for Apple Watch.
 - Not for rectangular Wear OS.
+- Not for Wear OS 5 or older yet.
 - Not a smart ring.
 - Not a web clone of the watch face.
 - Location is not required.
