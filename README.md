@@ -1,6 +1,6 @@
 # WeatherRing site
 
-Public marketing site for **WeatherRing** — a 24-hour climate ring for round Wear OS watches.
+Public marketing site for **WeatherRing** — a 24-hour climate ring for round Wear OS 6+ watches.
 
 - Canonical: https://weatherring.net
 - Privacy: https://weatherring.net/privacy
