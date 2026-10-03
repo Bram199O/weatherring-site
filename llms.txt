@@ -18,8 +18,8 @@ The Android phone companion uses the exact same preview rendering as the watch. 
 
 One purchase covers both the phone companion and the Wear OS app. You still install twice.
 
-- Wear OS 6 or newer: the face can be added after the watch app is installed.
-- Wear OS 5 and older: the face does not show up in the watch face picker. Support for Wear OS 5 watches is being worked on.
+- Requires Wear OS 6 or newer. The face can be added after the watch app is installed.
+- Not compatible with Wear OS 5 or older.
 
 Always-on is live. Unlocked AOD only. The interactive face ignores the Always-on group. AOD toggles: temperature ring, sky glow, precipitation, time, date, temps, city.
 
@@ -51,13 +51,13 @@ Location is optional. Search any city manually, or tap "Use my location" for a q
 2. Install the same app on the watch.
 3. Open once on the watch, set WeatherRing as the face.
 
-The WeatherRing watch face requires Wear OS 6 or newer and a round display (for example Pixel Watch 3/4, Galaxy Watch 8, or watches updated to Wear OS 6). Support for Wear OS 5 watches is being worked on.
+Requires Wear OS 6 or newer. Not compatible with Wear OS 5 or older. It also needs a round display.
 
 ## What it is not
 
 - Not for Apple Watch.
 - Not for rectangular Wear OS.
-- Not for Wear OS 5 or older yet.
+- Not compatible with Wear OS 5 or older. Requires Wear OS 6 or newer.
 - Not a smart ring.
 - Not a web clone of the watch face.
 - Location is not required.
