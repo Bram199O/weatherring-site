@@ -44,7 +44,7 @@ Example — not your city.
 - All: Midnight to midnight, with midnight at the bottom of the ring and noon at the top. Color shows temperature, and the hand points to the current hour.
 - Now: From midnight to the hand is time that has already passed today. The inner and outer lines are the same mark.
 - Temperature: Cool hours sit toward blue and violet. Warm hours sit toward orange and red.
-- Night: The darker arc is night. It lifts at sunrise and returns at sunset.
+- Night: The darker arc is night. It lifts at sunrise and returns at sunset, around 07 and 19 in the example.
 - Sky: The glow inside the ring is the sky: gold for sun, pale for overcast, gold and grey stripes when partly cloudy.
 - Rain: Streaks on that hour. Longer streaks mean more rain, gaps mean patchy showers.
 - Snow: Soft white ticks mean snow or ice, not rain.
