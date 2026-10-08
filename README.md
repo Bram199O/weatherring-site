@@ -12,7 +12,7 @@ This repository is the website only (static HTML/CSS/JS). It is **not** the Andr
 
 - `/` — product
 - `/how-to-read/` — how to read the ring
-- `/privacy/` — privacy policy (12 September 2026)
+- `/privacy/` — privacy policy (8 October 2026)
 - `/llms.txt` — machine-readable facts
 
 ## Google Play

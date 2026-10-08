@@ -81,4 +81,4 @@ Requires Wear OS 6 or newer. Not compatible with Wear OS 5 or older. It also nee
 
 See https://weatherring.net/privacy/
 Forecast coordinates go to weather.weatherring.net (self-hosted Open-Meteo); if that is slow or down, the same coordinates go to WeatherAPI.com as forecast backup. City search uses WeatherAPI.com. Live GPS place name on the phone only uses BigDataCloud. No accounts, no ads, no sale of data.
-Last updated: 16 September 2026
+Last updated: 8 October 2026
