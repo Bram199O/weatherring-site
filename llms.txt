@@ -10,18 +10,33 @@
 
 ## What it is
 
-WeatherRing is a watch face for round Wear OS 6+ displays. The rim is today’s forecast from midnight to midnight. Color shows temperature, and the hand points to the current hour.
+WeatherRing is a watch face for round Wear OS 6+ displays. The rim is today’s forecast from midnight to midnight, with midnight at the bottom and noon at the top. Its color is the temperature. The hand shows the time now.
 
-Layers on the ring: night veil, sky glow, rain, snow, thunder, fog. Rain, snow and lightning sit on top of the sky glow — they never replace it.
+Current version: 1.2.
 
-The Android phone companion uses the exact same preview rendering as the watch. Customize the face and Always-On Display from the Look tab. Location is optional.
+Layers on the ring: night veil, sky glow, rain, snow, thunder, fog, wind arrows. Rain, snow and lightning sit on top of the sky glow — they never replace it. Sky glow is gold for sun and pale for overcast.
+
+The Android phone companion uses the exact same preview rendering as the watch. Customize the face and Always-On Display from the Look tab, with sliders and preset colour choices. Location is optional.
 
 One purchase covers both the phone companion and the Wear OS app. You still install twice.
 
 - Requires Wear OS 6 or newer. The face can be added after the watch app is installed.
 - Not compatible with Wear OS 5 or older.
 
-Always-on is live. Unlocked AOD only. The interactive face ignores the Always-on group. AOD toggles: temperature ring, sky glow, precipitation, time, date, temps, city.
+Always-on: choose what stays visible when the watch screen dims. It doesn't change the face when the watch is awake. Toggles: temperature ring, sky glow, precipitation, time, date, center temperatures, city name. Wind arrows are not shown on the always-on screen. The time can be dimmed in always-on under Customise on the watch.
+
+## New in 1.2
+
+- Wind arrows on the ring: direction and strength, magenta edge for gusts of 75 km/h or more. Arrows start at Beaufort 4 by default; choose from which wind force they show (Look tab, under Weather, Wind).
+- Next days (optional, off by default): tomorrow or the next 2 days in the bottom half of the ring, with low and high. Optional day label in the sky glow.
+- Complication slot above the time. Shows the watch battery by default: green from 60%, yellow from 20 to 60%, red below 20%. Change it on the watch: touch and hold the face, tap Customise, then tap the slot.
+- Time Auto, 12 h or 24 h, optional seconds, always-on time brightness (under Customise on the watch).
+- Temperature Auto, °C or °F. Auto follows the phone's region.
+- Date and weekday letters in the phone's language. The app's own screens are in English.
+- Refresh every 1, 2, 3 or 6 hours (Watch tab). Default is every hour. Follow your location uses the same interval.
+- More reliable location.
+- Clearer How to read guide in the app.
+- Also: larger text in the phone app; the night veil can leave rain, snow, storms and fog bright at night (Also dim weather off); fixes for a watch app crash when falling back to watch GPS, weather refresh on Android 10/11 phones, and yesterday's weather after midnight.
 
 No account. No ads. No sale of data.
 
@@ -29,26 +44,29 @@ No account. No ads. No sale of data.
 
 Example — not your city.
 
-- All: Midnight to midnight. Color shows temperature, and the hand points to the current hour.
-- Now: From midnight to the hand is time that has already passed today. The inner and outer lines point to the same mark.
-- Temperature: Cooler hours lean blue and violet, while warmer hours shift toward orange and red.
-- Night: The darker arc marks night. It disappears at sunrise and returns at sunset.
-- Sky: Inner glow shows sky clarity—yellow means clear skies, while white or gray indicates clouds.
-- Rain: Streaks appear on the hour—longer streaks mean heavier rain, while gaps mean patchy showers.
-- Snow: Soft white ticks represent snow or ice instead of rain.
-- Thunder: Lightning bolts appear whenever thunder is forecast, even if rain is light.
-- Fog: A milky inner band indicates fog or dense mist—a thicker band means heavier fog.
+- All: The ring is one day, from midnight to midnight, with midnight at the bottom. Its color is the temperature. The hand shows the time now.
+- Now: The part from midnight to the hand is the time that has already passed today. The thin inner and outer lines show the same.
+- Temperature: Cool hours are blue or violet, warm hours orange or red. For colors that are easier to tell apart with color blindness: Look tab, under Display.
+- Night: The darker part is night. It lifts at sunrise (about 07) and returns at sunset (about 19). To make it lighter or darker: Look tab, under Sky, Night veil.
+- Sky: The glow inside the ring is the sky: gold for sun, pale for overcast. Patchy cloud mixes the two. Gold fades after sunset. To change or turn it off: Look tab, under Sky, Sky glow.
+- Rain: Streaks on that hour. Longer means more rain, gaps mean patchy rain. Settings: Look tab, under Weather, Rain.
+- Snow: Soft white ticks mean snow or ice, not rain. Settings: Look tab, under Weather, Snow.
+- Thunder: Bolts when thunder is in the forecast, even if the rain is light. Settings: Look tab, under Weather, Thunderstorm.
+- Fog: A milky band on the inside means fog or dense mist. Thicker means heavier. Settings: Look tab, under Weather, Fog.
+- Wind: Black arrows point where the wind blows to (north is up). A bigger arrow means stronger wind. Calmer hours get no arrow: by default arrows start at Beaufort 4, a clearly noticeable wind. A magenta edge means gusts of 75 km/h or more. To change this: Look tab, under Weather, Wind.
+- Next days (optional): To see the coming days, turn on Next days in the Look tab. The bottom half of the ring then shows tomorrow, or the next two days. Tomorrow starts on the right. The two letters are the weekday in your phone's language (for example MO, TU), with that day's low and high beside them. You can change all of this in the Look tab, under Next days.
+- Slot above the time: watch battery by default, green from 60%, yellow from 20 to 60%, red below 20%.
 
-Low / now / high are the three numbers. 00 06 12 18 are clock hours.
+The three numbers in the middle are today's low, the temperature now, and today's high. 00, 06, 12 and 18 around the ring are clock hours. Both can be turned off in the Look tab, under Center.
 
 ## Location
 
-Location is optional. Search any city manually, or tap "Use my location" for a quick one-time check. Hourly location updates are controlled by a separate switch (off by default) and need Allow all the time. Saved cities never run background GPS.
+Location is optional. Search any city manually, or tap "Use my location" for a quick one-time check. Follow your location is a separate switch (off by default), needs Allow all the time, and updates at the Refresh every interval. Saved cities never run background GPS.
 
 ## How to install
 
 1. Install on the phone from Google Play: https://play.google.com/store/apps/details?id=com.climatedayring.phone
-2. Install the same app on the watch.
+2. Install the same app on the watch (tap Install on watch in the phone app).
 3. Open once on the watch, set WeatherRing as the face.
 
 Requires Wear OS 6 or newer. Not compatible with Wear OS 5 or older. It also needs a round display.
@@ -67,4 +85,4 @@ Requires Wear OS 6 or newer. Not compatible with Wear OS 5 or older. It also nee
 
 See https://weatherring.net/privacy/
 Forecast coordinates go to weather.weatherring.net (self-hosted Open-Meteo); if that is slow or down, the same coordinates go to WeatherAPI.com as forecast backup. City search uses WeatherAPI.com. Live GPS place name on the phone only uses BigDataCloud. No accounts, no ads, no sale of data.
-Last updated: 16 September 2026
+Last updated: 8 October 2026

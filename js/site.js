@@ -1,14 +1,16 @@
 
 const LAYERS = {
-  all: { caption: "Midnight to midnight. Color shows temperature, and the hand points to the current hour.", face: "read-all.jpg", alt: "Example WeatherRing face with every layer on, 11:00 on Friday 20 March" },
-  now: { caption: "From midnight to the hand is time that has already passed today. The inner and outer lines point to the same mark.", face: "read-now.jpg", alt: "Example WeatherRing face highlighting the now hand and elapsed hours" },
-  temperature: { caption: "Cooler hours lean blue and violet, while warmer hours shift toward orange and red.", face: "read-temperature.jpg", alt: "Example WeatherRing face showing temperature colour around the rim" },
-  night: { caption: "The darker arc marks night. It disappears at sunrise and returns at sunset.", face: "read-night.jpg", alt: "Example WeatherRing face with the night veil on the rim" },
-  sky: { caption: "Inner glow shows sky clarity—yellow means clear skies, while white or gray indicates clouds.", face: "read-sky.jpg", alt: "Example WeatherRing face with sky glow inside the ring" },
-  rain: { caption: "Streaks appear on the hour—longer streaks mean heavier rain, while gaps mean patchy showers.", face: "read-rain.jpg", alt: "Example WeatherRing face with rain streaks on the rim" },
-  snow: { caption: "Soft white ticks represent snow or ice instead of rain.", face: "read-snow.jpg", alt: "Example WeatherRing face with snow ticks on the rim" },
-  thunder: { caption: "Lightning bolts appear whenever thunder is forecast, even if rain is light.", face: "read-thunder.jpg", alt: "Example WeatherRing face with lightning bolts on the rim" },
-  fog: { caption: "A milky inner band indicates fog or dense mist—a thicker band means heavier fog.", face: "read-fog.jpg", alt: "Example WeatherRing face with a milky fog band" }
+  all: { caption: "The ring is one day, from midnight to midnight, with midnight at the bottom. Its color is the temperature. The hand shows the time now.", face: "read-all.jpg", alt: "Example WeatherRing face with every layer on: temperature colours, night, sky glow, rain, snow, thunder, fog and wind arrows" },
+  now: { caption: "The part from midnight to the hand is the time that has already passed today. The thin inner and outer lines show the same.", face: "read-now.jpg", alt: "Example WeatherRing face highlighting the now hand and elapsed hours" },
+  temperature: { caption: "Cool hours are blue or violet, warm hours orange or red. For colors that are easier to tell apart with color blindness: Look tab, under Display.", face: "read-temperature.jpg", alt: "Example WeatherRing face showing temperature colour around the rim" },
+  night: { caption: "The darker part is night. It lifts at sunrise (about 07) and returns at sunset (about 19). To make it lighter or darker: Look tab, under Sky, Night veil.", face: "read-night.jpg", alt: "Example WeatherRing face with the night veil on the rim" },
+  sky: { caption: "The glow inside the ring is the sky: gold for sun, pale for overcast. Patchy cloud mixes the two. Gold fades after sunset. To change or turn it off: Look tab, under Sky, Sky glow.", face: "read-sky.jpg", alt: "Example WeatherRing face with sky glow inside the ring" },
+  rain: { caption: "Streaks on that hour. Longer means more rain, gaps mean patchy rain. Settings: Look tab, under Weather, Rain.", face: "read-rain.jpg", alt: "Example WeatherRing face with rain streaks on the rim" },
+  snow: { caption: "Soft white ticks mean snow or ice, not rain. Settings: Look tab, under Weather, Snow.", face: "read-snow.jpg", alt: "Example WeatherRing face with snow ticks on the rim" },
+  thunder: { caption: "Bolts when thunder is in the forecast, even if the rain is light. Settings: Look tab, under Weather, Thunderstorm.", face: "read-thunder.jpg", alt: "Example WeatherRing face with lightning bolts on the rim" },
+  fog: { caption: "A milky band on the inside means fog or dense mist. Thicker means heavier. Settings: Look tab, under Weather, Fog.", face: "read-fog.jpg", alt: "Example WeatherRing face with a milky fog band" },
+  wind: { caption: "Black arrows point where the wind blows to (north is up). A bigger arrow means stronger wind. Calmer hours get no arrow: by default arrows start at Beaufort 4, a clearly noticeable wind. A magenta edge means gusts of 75 km/h or more. To change this: Look tab, under Weather, Wind.", face: "read-wind.jpg", alt: "Example WeatherRing face with black wind arrows on the ring, some with a magenta gust edge" },
+  nextdays: { caption: "To see the coming days, turn on Next days in the Look tab. The bottom half of the ring then shows tomorrow, or the next two days. Tomorrow starts on the right. The two letters are the weekday in your phone's language (for example MO, TU), with that day's low and high beside them. You can change all of this in the Look tab, under Next days.", face: "read-nextdays.jpg", alt: "Example WeatherRing face with Next days on: today in the top half, Saturday in the bottom half with a low of 3° and a high of 24°" }
 };
 
 const preferWebp = (() => {
@@ -75,7 +77,26 @@ function applyLayer(id, syncHash) {
   decode.then(applySrc).catch(applySrc);
 }
 
-preloadLayerFaces();
+let preloaded = false;
+function preloadOnce() {
+  if (preloaded) return;
+  preloaded = true;
+  preloadLayerFaces();
+}
+if (layerFace && "IntersectionObserver" in window) {
+  const io = new IntersectionObserver((entries) => {
+    if (entries.some((e) => e.isIntersecting)) {
+      io.disconnect();
+      preloadOnce();
+    }
+  }, { rootMargin: "300px" });
+  io.observe(layerFace);
+} else if (layerFace) {
+  preloadOnce();
+}
+document.querySelectorAll("[data-layer]").forEach((btn) => {
+  ["pointerenter", "focus"].forEach((ev) => btn.addEventListener(ev, preloadOnce, { once: true }));
+});
 
 if (layerFace && preferWebp) {
   const src = layerFace.getAttribute("src") || "";
